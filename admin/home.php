@@ -88,10 +88,10 @@ if (isset($_SESSION['email'])) {
               </li>
               <hr>
               <li class="nav-item">
-                <a class="nav-link" href="admin/login.php">Login as Admin</a>
+                <a class="nav-link" href="../concessioner/login.php">Login as Concessioner</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="concessioner/login.php">Login as Concessioner</a>
+                <a class="nav-link" href="../customer/login.php">Login as Customer</a>
               </li>
               <hr>
               <li class="nav-item">
