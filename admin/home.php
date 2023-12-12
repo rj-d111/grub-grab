@@ -123,7 +123,7 @@ if (isset($_SESSION['email'])) {
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Email</th>
-              <th scope="col">Date Created</th>
+              <!-- <th scope="col">Date Created</th> -->
               <th scope="col">Contact No.</th>
               <th scope="col">Actions</th>
 
@@ -131,16 +131,24 @@ if (isset($_SESSION['email'])) {
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Moreen</td>
-              <td>moreen@gmail.com</td>
-              <td>11/22/23</td>
-              <td> 099999999</td>
-              <td>
+            <?php 
+    $i =1;
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr>";
+        echo '<th scope="row">'.$i.'</td>';
+        echo "<td>{$row['first_name']} {$row['last_name']}</td>";
+        echo "<td>{$row['email']}</td>";
+        echo "<td>{$row['contact_no']}</td>";
+       ?>  
+                <td>
                 <button class="btn btn-primary">Edit</button>
                 <button class="btn btn-danger">Delete</button>
               </td>
-            </tr>
+              <?php
+        echo "</tr>";
+        $i++;
+    }
+    ?>
           </tbody>
         </table>
       </div>
