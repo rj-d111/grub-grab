@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $successmessage = "User Added Successfully";
 
                 //Go to the home page
-                //  header("Location: home.php");
+                header("Location: home.php");
                 // exit;
             }
         } catch (Exception $e) {
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="container">
         <!-- Heading -->
-        <h1>New User</h1>
+        <h1>New Customer</h1>
         <!-- Start of Alert -->
         <?php if (!empty($successmessage)) {
             echo '<div class="alert alert-success" role="alert">' . $successmessage . '</div>';

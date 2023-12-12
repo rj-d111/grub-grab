@@ -1,6 +1,7 @@
 <?php
 session_start();
- include "../php-connect/db-conn.php";
+//call the database connection
+include "../php-connect/db_conn.php";
 
 // Assume you have a database connection established
 // Include your database connection logic here
