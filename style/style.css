@@ -101,4 +101,11 @@ main>.container-xl{
 }
 
 
-  /* Footer */
+/* For the Cards */
+.card-img-top-item {
+ /* Set the maximum width for the image */
+  width: 100%; /* Ensure the image takes up the available width */
+  height: 160px; /* Set a fixed height for the image (adjust as needed) */
+  object-fit: cover; /* Crop the image to cover the specified dimensions */
+  object-position: center center; /* Center the image within the container */
+}

@@ -32,7 +32,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
             // Assigning to SESSION
             if($row['password']=== $password){
                 $_SESSION['email'] = $row['email'];                
-                $_SESSION['id'] = $row['id'];
+                $_SESSION['id'] = $row['customerID'];
                 header("Location: home.php");
             }else{
                 header("Location: login.php?incorrect=true");

@@ -72,55 +72,57 @@ if (isset($_SESSION['email'])) {
         </div>
         <!-- End of tab 1 -->
       </div>
-      <!--Start of tab 2 -->
-      <?php
-      //SQL query to join tbl_application and tbl_customer
-      $sql = "SELECT * FROM tbl_concessioner";
-      // Execute the query
-      $result = mysqli_query($conn, $sql);
-      ?>
-      <a href="add-customer.php" class="btn btn-maroon my-3">+ Add Concessioner</a>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <!--Start of tab 2 -->
+        <?php
+        //SQL query to join tbl_application and tbl_customer
+        $sql = "SELECT * FROM tbl_concessioner";
+        // Execute the query
+        $result = mysqli_query($conn, $sql);
+        ?>
+        <a href="add-customer.php" class="btn btn-maroon my-3">+ Add Concessioner</a>
 
 
-      <h2 class="text-maroon mb-3">Concessioner Profile List</h2>
-      <table class="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Business Name</th>
-            <!-- <th scope="col">Date Created</th> -->
-            <th scope="col">Contact No.</th>
-            <th scope="col">Actions</th>
+        <h2 class="text-maroon mb-3">Concessioner Profile List</h2>
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Business Name</th>
+              <!-- <th scope="col">Date Created</th> -->
+              <th scope="col">Contact No.</th>
+              <th scope="col">Actions</th>
 
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <?php
-            $i = 1;
-            while ($row = mysqli_fetch_assoc($result)) {
-              echo "<tr>";
-              echo '<th scope="row">' . $i . '</td>';
-              echo "<td>{$row['firstName']} {$row['lastName']}</td>";
-              echo "<td>{$row['email']}</td>";
-              echo "<td>{$row['business_name']}</td>";
-              echo "<td>{$row['contact_no']}</td>";
-            ?>
-              <td>
-                <button class="btn btn-primary">Edit</button>
-                <button class="btn btn-danger">Delete</button>
-              </td>
-            <?php
-              echo "</tr>";
-              $i++;
-            }
-            ?>
-        </tbody>
-      </table>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <?php
+              $i = 1;
+              while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr>";
+                echo '<th scope="row">' . $i . '</td>';
+                echo "<td>{$row['firstName']} {$row['lastName']}</td>";
+                echo "<td>{$row['email']}</td>";
+                echo "<td>{$row['business_name']}</td>";
+                echo "<td>{$row['contact_no']}</td>";
+              ?>
+                <td>
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-danger">Delete</button>
+                </td>
+              <?php
+                echo "</tr>";
+                $i++;
+              }
+              ?>
+          </tbody>
+        </table>
+      </div>
+      <!--End of tab 2 -->
     </div>
-    <!--End of tab 2 -->
     </div>
     </div>
     </div>
