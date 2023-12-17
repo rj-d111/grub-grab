@@ -62,19 +62,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+  <html lang="en">
 
-<head>
+  <!-- Head Content -->
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../style/style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Grub Grab</title>
+  </head>
 
-<body>
-
+  <body class="d-flex flex-column h-100">
     <!--Start of navbar -->
     <nav class="navbar navbar-dark bg-maroon fixed-top">
       <div class="container-xl">
@@ -87,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="d-flex justify-content-center">
           <a class="navbar-brand fs-2" href="#">
             <!-- Logo Image -->
-            <img src="../img/grub-grab.png" class="grub-grab-logo" alt="grub-grab" style="max-height: 100px;">
+            <img src="../img/grub-grab.png" class="grub-grab-logo" alt="grub-grab">
           </a>
         </div>
 
@@ -145,8 +147,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </nav>
     <!--End of navbar -->
 
-<!-- Start of Main Content -->
-    <div class="container" style="margin-top: 150px">
+    <!-- Start of Content -->
+    <div class="container mb-5" style="margin-top: 150px;">
         <!-- Heading -->
         <h1>New Customer</h1>
         <!-- Start of Alert -->
@@ -180,13 +182,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="floatingInput">Contact No.</label>
             </div>
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-danger">Submit</button>
         </form>
     </div>
-    <!-- End of Main Content -->
+    <!-- End of Content -->
 
-      <!-- Start of Footer -->
-      <footer class="bg-maroon text-white pt-5 pb-5">
+    <!-- Start of Footer -->
+    <footer class="bg-maroon text-white pt-5 pb-5">
       <div class="container">
         <div class="row">
           <!-- Col 1 -->
@@ -229,6 +231,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <script src="script/index.js"></script>
     <!-- End of Footer -->
-</body>
+  </body>
 
-</html>
+  </html>

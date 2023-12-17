@@ -112,9 +112,9 @@ if (isset($_SESSION['email'])) {
       <div class="container mb-5" style="margin-top: 150px;">
 
         <div class="d-flex justify-content-between mb-4">
-          <h2 class="text-success me-auto">Manage Customers</h2>
+          <h2 class="text-maroon me-auto">Manage Customers</h2>
           <div class="d-flex align-items-center">
-            <a href="add-customer.php" class="btn btn-success">+ Add Customer</a>
+            <a href="add-customer.php" class="btn btn-danger">+ Add Customer</a>
           </div>
         </div>
 
@@ -163,7 +163,7 @@ if (isset($_SESSION['email'])) {
           <!-- Col 1 -->
           <div class="col-sm-6 col-md-3">
             <!-- Insert Logo Image -->
-            <img src="img/grub-grab.png" class="img-fluid" style="max-height: 200px; width: auto;" alt="grub-grab">
+            <img src="../img/grub-grab.png" class="img-fluid" style="max-height: 200px; width: auto;" alt="grub-grab">
           </div>
           <!-- Col 2 -->
           <div class="col-sm-6 col-md-3">

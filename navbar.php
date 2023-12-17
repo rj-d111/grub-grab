@@ -13,8 +13,8 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-..." crossorigin="anonymous" />
-  <link rel="stylesheet" href="../style/style.css">
-  <title>Grub Grab Customer Login</title>
+  <link rel="stylesheet" href="style/style.css">
+  <title>Grub Grab Menu</title>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -28,13 +28,24 @@
       </button>
 
       <!-- Center of Navbar -->
-      <div class="d-flex ms-auto me-auto">
+      <div class="d-flex justify-content-center">
         <a class="navbar-brand fs-2" href="#">
           <!-- Logo Image -->
-          <img src="../img/grub-grab.png" class="grub-grab-logo" alt="grub-grab">
+          <img src="img/grub-grab.png" class="grub-grab-logo" alt="grub-grab">
         </a>
       </div>
 
+      <!-- Right side of navbar -->
+      <div class="d-flex">
+        <div class="shopping-icons mr-5">
+          <a href="cart.html" class="icons-btn d-inline-block text-white pe-3">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+          <a href="#" class="icons-btn d-inline-block text-white">
+            <i class="fas fa-user"></i>
+          </a>
+        </div>
+      </div>
 
       <!-- Appearing when clicked -->
       <div class="offcanvas offcanvas-maroon offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
@@ -61,52 +72,17 @@
             </li>
             <hr>
             <li class="nav-item">
-              <a class="nav-link" href="../admin/login.php">Login as Admin</a>
+              <a class="nav-link" href="admin/login.php">Login as Admin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../concessioner/login.php">Login as Concessioner</a>
+              <a class="nav-link" href="concessioner/login.php">Login as Concessioner</a>
             </li>
           </ul>
         </div>
         <!-- End of List in offcanvas body -->
-</div>    
-    </div>
-</nav>
-<!--End of navbar -->
+      </div>
 
-<!-- Start of main content -->
-<div class="d-flex justify-content-center" style="margin-top: 100px;">
-        <div class="card py-3 px-5 my-5" style="width: 30rem;">
-            <!-- Start of Login Page -->
-            <form class="form-signin" action="function.php" method="post">
-                <div class="text-center">
-                    <img src="../img/logo (with shadow).png" alt="" width="200" class="mb-4">
-                    <h1 class="h3 mb-3 fw-bold">LOG IN</h1>
-                </div>
-                <?php if(isset($_GET['incorrect']) && $_GET['incorrect']){ ?>
-                    <div class="alert alert-danger" role="alert">Incorrect Email or Password</div>
-                <?php }?>
-                <div class="mb-3">
-                    <label for="inputEmail" class="form-label">Email address</label>
-                    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required="" autofocus="">
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword" class="form-label">Password</label>
-                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="">
-                </div>
-                <div class="form-check mb-3">
-                    <input type="checkbox" value="remember-me" id="rememberMe" class="form-check-input">
-                    <label for="rememberMe" class="form-check-label">Remember me</label>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-danger" value="admin-log-in" name="submit" type="submit">Sign in</button>
-                </div>
-                <p class="mt-5 mb-3 text-muted text-center">© 2023 ALL RIGHTS RESERVED</p>
-            </form>
-            <!-- End of Login Page -->
-        </div>
-    </div>
 
-    <!-- End of main content -->
-</body>
-</html>
+    </div>
+  </nav>
+  <!--End of navbar -->

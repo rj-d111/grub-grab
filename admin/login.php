@@ -18,8 +18,7 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-  <!--Start of navbar -->
-  <nav class="navbar navbar-dark bg-success fixed-top">
+  <nav class="navbar navbar-dark bg-maroon fixed-top">
     <div class="container-xl">
       <!-- Hamburger Menu Left Side -->
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvassuccessNavbar"
@@ -37,15 +36,15 @@
 
 
       <!-- Appearing when clicked -->
-      <div class="offcanvas offcanvas-success offcanvas-start text-bg-success" tabindex="-1" id="offcanvassuccessNavbar"
+      <div class="offcanvas offcanvas-success offcanvas-start text-bg-maroon" tabindex="-1" id="offcanvassuccessNavbar"
         aria-labelledby="offcanvassuccessNavbarLabel">
-        <div class="offcanvas-header bg-success">
+        <div class="offcanvas-header text-white bg-maroon">
           <h3 class="offcanvas-title" id="offcanvassuccessNavbarLabel">Grub and Grab</h3>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         </div>
         <!-- List in offcanvas body -->
-        <div class="offcanvas-body bg-success">
+        <div class="offcanvas-body bg-maroon">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -64,7 +63,7 @@
               <a class="nav-link" href="../concessioner/login.php">Login as Concessioner</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../user/login.php">Login as User</a>
+              <a class="nav-link" href="../customer/login.php">Login as Customer</a>
             </li>
           </ul>
         </div>
@@ -99,7 +98,7 @@
                     <label for="rememberMe" class="form-check-label">Remember me</label>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-success" value="admin-log-in" name="submit" type="submit">Sign in</button>
+                    <button class="btn btn-danger" value="admin-log-in" name="submit" type="submit">Sign in</button>
                 </div>
                 <p class="mt-5 mb-3 text-muted text-center">© 2023 ALL RIGHTS RESERVED</p>
             </form>

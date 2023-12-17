@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-..." crossorigin="anonymous" />
   <link rel="stylesheet" href="../style/style.css">
-  <title>Grub Grab Customer Login</title>
+  <title>Grub Grab Concessioner Login</title>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -37,7 +37,7 @@
 
 
       <!-- Appearing when clicked -->
-      <div class="offcanvas offcanvas-maroon offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+      <div class="offcanvas offcanvas-info offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
         aria-labelledby="offcanvasDarkNavbarLabel">
         <div class="offcanvas-header">
           <h3 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Grub and Grab</h3>
@@ -64,7 +64,7 @@
               <a class="nav-link" href="../admin/login.php">Login as Admin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../concessioner/login.php">Login as Concessioner</a>
+              <a class="nav-link" href="../customer/login.php">Login as User</a>
             </li>
           </ul>
         </div>
@@ -72,41 +72,10 @@
 </div>    
     </div>
 </nav>
+<section id="fix-top"></section>
+
+
+<!-- Script for navbar -->
+<script src="../script/navbar.js"></script>
+
 <!--End of navbar -->
-
-<!-- Start of main content -->
-<div class="d-flex justify-content-center" style="margin-top: 100px;">
-        <div class="card py-3 px-5 my-5" style="width: 30rem;">
-            <!-- Start of Login Page -->
-            <form class="form-signin" action="function.php" method="post">
-                <div class="text-center">
-                    <img src="../img/logo (with shadow).png" alt="" width="200" class="mb-4">
-                    <h1 class="h3 mb-3 fw-bold">LOG IN</h1>
-                </div>
-                <?php if(isset($_GET['incorrect']) && $_GET['incorrect']){ ?>
-                    <div class="alert alert-danger" role="alert">Incorrect Email or Password</div>
-                <?php }?>
-                <div class="mb-3">
-                    <label for="inputEmail" class="form-label">Email address</label>
-                    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required="" autofocus="">
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword" class="form-label">Password</label>
-                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="">
-                </div>
-                <div class="form-check mb-3">
-                    <input type="checkbox" value="remember-me" id="rememberMe" class="form-check-input">
-                    <label for="rememberMe" class="form-check-label">Remember me</label>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-danger" value="admin-log-in" name="submit" type="submit">Sign in</button>
-                </div>
-                <p class="mt-5 mb-3 text-muted text-center">© 2023 ALL RIGHTS RESERVED</p>
-            </form>
-            <!-- End of Login Page -->
-        </div>
-    </div>
-
-    <!-- End of main content -->
-</body>
-</html>

@@ -38,7 +38,7 @@
       <!-- Right side of navbar -->
       <div class="d-flex">
         <div class="shopping-icons mr-5">
-          <a href="cart.html" class="icons-btn d-inline-block text-white pe-3">
+          <a href="cart.php" class="icons-btn d-inline-block text-white pe-3">
             <i class="fas fa-shopping-cart"></i>
           </a>
           <a href="#" class="icons-btn d-inline-block text-white">
@@ -72,13 +72,6 @@
             </li>
             <hr>
             <li class="nav-item">
-              <a class="nav-link" href="admin/login.php">Login as Admin</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="concessioner/login.php">Login as Concessioner</a>
-            </li>
-            <hr>
-            <li class="nav-item">
               <a class="nav-link" href="logout.php">Logout</a>
             </li>
           </ul>
@@ -102,13 +95,13 @@
       <!-- Card 1 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-5">
         <div class="card">
-          <img src="img/menudo.jpg" class="card-img-top" alt="...">
+          <img src="../img/menudo.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Menudo</h5>
             <p class="card-text text-secondary">Justine's Store</p>
             <div class="d-flex justify-content-between">
               <p>₱80.00</p>
-              <a href="customer/login.php" class="btn btn-success rounded-circle"><b>+</b></a>
+              <a class="btn btn-primary rounded-circle"><b>+</b></a>
             </div>
           </div>
         </div>
@@ -117,13 +110,13 @@
       <!-- Card 2 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-5">
         <div class="card">
-          <img src="img/bicol-express.jpg" class="card-img-top" alt="...">
+          <img src="../img/bicol-express.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Bicol Express</h5>
             <p class="card-text text-secondary">Menta's Store</p>
             <div class="d-flex justify-content-between">
               <p>₱85.00</p>
-              <a href="#" class="btn btn-success rounded-circle"><b>+</b></a>
+              <a href="#" class="btn btn-primary rounded-circle"><b>+</b></a>
             </div>
           </div>
         </div>
@@ -132,13 +125,13 @@
       <!-- Card 3 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-5">
         <div class="card">
-          <img src="img/adobo.jpg" class="card-img-top" alt="...">
+          <img src="../img/adobo.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Adobo</h5>
             <p class="card-text text-secondary">Michael's Store</p>
             <div class="d-flex justify-content-between">
               <p>₱85.00</p>
-              <a href="#" class="btn btn-success rounded-circle"><b>+</b></a>
+              <a href="#" class="btn btn-primary rounded-circle"><b>+</b></a>
             </div>
           </div>
         </div>
@@ -147,13 +140,13 @@
       <!-- Card 4 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-5">
         <div class="card">
-          <img src="img/sisig.jpg" class="card-img-top" alt="...">
+          <img src="../img/sisig.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Sisig</h5>
             <p class="card-text text-secondary">Justine's Store</p>
             <div class="d-flex justify-content-between">
               <p>₱85.00</p>
-              <a href="#" class="btn btn-success rounded-circle"><b>+</b></a>
+              <a href="#" class="btn btn-primary rounded-circle"><b>+</b></a>
             </div>
           </div>
         </div>
@@ -166,13 +159,13 @@
       <!-- Card 1 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-5">
         <div class="card">
-          <img src="img/bottled-water.jpg" class="card-img-top" alt="...">
+          <img src="../img/bottled-water.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Bottled Water</h5>
             <p class="card-text text-secondary">Ana's Store</p>
             <div class="d-flex justify-content-between">
               <p>₱30.00</p>
-              <a href="#" class="btn btn-success rounded-circle"><b>+</b></a>
+              <a href="#" class="btn btn-primary rounded-circle"><b>+</b></a>
             </div>
           </div>
         </div>
@@ -181,13 +174,13 @@
       <!-- Card 2 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-5">
         <div class="card">
-          <img src="img/coke.jpg" class="card-img-top" alt="...">
+          <img src="../img/coke.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Coke</h5>
             <p class="card-text text-secondary">Michelle's Store</p>
             <div class="d-flex justify-content-between">
               <p>₱40.00</p>
-              <a href="#" class="btn btn-success rounded-circle"><b>+</b></a>
+              <a href="#" class="btn btn-primary rounded-circle"><b>+</b></a>
             </div>
           </div>
         </div>
@@ -196,13 +189,13 @@
       <!-- Card 3 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-5">
         <div class="card">
-          <img src="img/mountain-dew.jpg" class="card-img-top" alt="...">
+          <img src="../img/mountain-dew.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Mountain Dew</h5>
             <p class="card-text text-secondary">Dewey's Store</p>
             <div class="d-flex justify-content-between">
               <p>₱50.00</p>
-              <a href="#" class="btn btn-success rounded-circle"><b>+</b></a>
+              <a href="#" class="btn btn-primary rounded-circle"><b>+</b></a>
             </div>
           </div>
         </div>
@@ -211,13 +204,13 @@
       <!-- Card 4 -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-5">
         <div class="card">
-          <img src="img/royal.jpg" class="card-img-top" alt="...">
+          <img src="../img/royal.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Royal</h5>
             <p class="card-text text-secondary">Alyssa's Store</p>
             <div class="d-flex justify-content-between">
               <p>₱60.00</p>
-              <a href="#" class="btn btn-success rounded-circle"><b>+</b></a>
+              <a href="#" class="btn btn-primary rounded-circle"><b>+</b></a>
             </div>
           </div>
         </div>
@@ -234,7 +227,7 @@
         <!-- Col 1 -->
         <div class="col-sm-6 col-md-3">
           <!-- Insert Logo Image -->
-          <img src="img/grub-grab.png" class="img-fluid" style="max-height: 200px; width: auto;" alt="grub-grab">
+          <img src="../img/grub-grab.png" class="img-fluid" style="max-height: 200px; width: auto;" alt="grub-grab">
         </div>
         <!-- Col 2 -->
         <div class="col-sm-6 col-md-3">
@@ -269,7 +262,7 @@
 
   </footer>
 
-  <script src="script/index.js"></script>
+  <script src="../script/index.js"></script>
   <!-- End of Footer -->
 </body>
 
