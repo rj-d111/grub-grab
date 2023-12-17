@@ -24,7 +24,9 @@ $result = mysqli_query($conn, $sql);
           <?php
               if (isset($_SESSION['alertmessage'])) {
               echo $_SESSION['alertmessage'];
-              // Clear the session variable after displaying
+
+              // Clear the session variable
+              unset($_SESSION['alertmessage']);
               }
           ?>
           <!-- End of Alert Message -->

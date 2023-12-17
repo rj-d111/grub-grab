@@ -42,8 +42,16 @@ body{
     background-color: var(--maroon);
 }
 
-
-
+/* Nav Link */
+[role="tablist"] .nav-link.active{
+  color: var(--maroon);  
+}
+[role="tablist"] .nav-link{
+  color: var(--dark-gray);
+}
+[role="tablist"] .nav-link:hover{
+  color: var(--light-maroon);
+}
 
 /* Offcanvas */
 .offcanvas-header {

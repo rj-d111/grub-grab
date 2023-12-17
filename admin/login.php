@@ -98,7 +98,7 @@
                     <label for="rememberMe" class="form-check-label">Remember me</label>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-danger" value="admin-log-in" name="submit" type="submit">Sign in</button>
+                    <button class="btn btn-maroon" value="admin-log-in" name="submit" type="submit">Sign in</button>
                 </div>
                 <p class="mt-5 mb-3 text-muted text-center">© 2023 ALL RIGHTS RESERVED</p>
             </form>

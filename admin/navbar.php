@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
   <link rel="stylesheet" href="../style/style.css">
-  <title>Grub Grab Concessioner Login</title>
+  <title>Grub Grab Admin</title>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -59,13 +59,20 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
             </li>
+            <?php if ( basename($_SERVER['SCRIPT_FILENAME']) == 'login.php') { ?>
             <hr>
             <li class="nav-item">
-              <a class="nav-link" href="../admin/login.php">Login as Admin</a>
+              <a class="nav-link" href="../concessioner/login.php">Login as Concessioner</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../customer/login.php">Login as User</a>
+              <a class="nav-link" href="../customer/login.php">Login as Customer</a>
             </li>
+            <?php } else{ ?> 
+                <hr>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">Logout</a>
+            </li>
+            <?php } ?> 
           </ul>
         </div>
         <!-- End of List in offcanvas body -->

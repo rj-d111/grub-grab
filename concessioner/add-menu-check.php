@@ -84,8 +84,11 @@ mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
 
-// Success message
-echo "<script>alert('Menu item added successfully!');</script>";
+$_SESSION['alertmessage'] = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+Your menu <strong>'.$item_name.'</strong> has been added successfully.
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+';
 
 header("Location: home.php");
 exit();
