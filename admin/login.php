@@ -106,6 +106,4 @@
         </div>
     </div>
 
-    <!-- End of main content -->
-</body>
-</html>
+ <?php include "../footer.php" ?>

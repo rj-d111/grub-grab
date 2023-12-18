@@ -113,7 +113,7 @@
 
                             <!-- Select All Label -->
                             <div class="col-4">
-                                <label class="form-check-label" for="flexCheckDefault">Justine's Store</label>
+                                <label class="form-check-label" for="flexCheckDefault">Justine Cuisine</label>
                             </div>
                         </div>
                         <!-- 2nd Row -->

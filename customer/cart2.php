@@ -2,35 +2,60 @@
 session_start();
 include "../php-connect/db_conn.php";
 include "navbar.php"; 
+
+$customerID = $_SESSION['id'];
+//Get the order id of the customer
+$sql = "SELECT * FROM tbl_order WHERE customerID='$customerID'";
+$orderID = mysqli_fetch_assoc(mysqli_query($conn, $sql))['orderID'];
+
+
+$sql = "SELECT * FROM tbl_order_menu WHERE orderID='$orderID'";
+$result = mysqli_query($conn, $sql);
 ?>
     <!-- Start of Content -->
-    <main class="flex-shrink-0 mt-5 pt-5">
+    <main class=" mt-5 pt-5 bg-light">
         <div class="container-md">
         <a href="home.php" class="text-decoration-none link-dark">
                 <div class="fs-6 mt-5 mb-3"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</div>
             </a>
             <div class="fs-2 mb-3">Order Checkout</div>
-
             <div class="row">
                 <!-- Start of Container left Side -->
+                <?php while($row = mysqli_fetch_assoc($result)) :?>
                 <div class="col-lg-8">
                     <!-- Justine's Store -->
-                    <div class="container">
-
-                        <!-- 1st Row -->
+                    <div class="container mb-3">
+                      <!-- 1st Row -->
                         <div class="row bg-white border p-2">
-
                             <!-- Check Box -->
                             <div class="col-1">
                                 <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." checked="">
                             </div>
-
                             <!-- Select All Label -->
                             <div class="col-4">
-                                <label class="form-check-label" for="flexCheckDefault">Justine Cuisine</label>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                <?php $sql2 = "SELECT *
+        FROM tbl_concessioner c
+        JOIN tbl_menu_item m ON c.concessionerID = m.concessionerID
+        JOIN tbl_order_menu om ON m.menuItemID = om.MenuItemID
+        WHERE om.MenuItemID = '{$row['MenuItemID']}
+        GROUP BY c.business_name'";
+        $res2 = mysqli_query($conn, $sql2);
+
+        echo var_dump(mysqli_fetch_assoc($res2));
+        while($row2 = mysqli_fetch_assoc($res2)):
+        
+        $concessionerID = $row2['concessionerID'];
+       
+                   ?></label>
                             </div>
                         </div>
                         <!-- 2nd Row -->
+                        <?php           
+             $sql3 = "SELECT * FROM tbl_menu_item m JOIN tbl_order_menu om ON m.menuItemID=om.MenuItemID WHERE m.concessionerID ='$concessionerID'";
+            $res3 = mysqli_query($conn,$sql3);
+            while($row3= mysqli_fetch_assoc($res3)):
+            ?>
                         <div class="row bg-white border pt-3 pb-3 ps-2">
                                 <!-- Check Box -->
                                 <div class="col-1">
@@ -39,32 +64,37 @@ include "navbar.php";
                                 <div class="row col-11">
                                     <!-- Picture -->
                                     <div class="col-4 col-md-3">
-                                        <img src="../img/adobo.jpg" alt="" class="img-fluid">
+                                        <img src="../concessioner/<?php echo $row3['product_pic'] ?>" alt="" class="img-fluid">
                                     </div>
                                     <!-- Product Description -->
                                     <div class="row col-6 col-sm-4 align-items-center">
-                                        <div class="text-start">Adobo</div>
+                                        <div class="text-start"><?php echo $row3['item_name'] ?></div>
                                     </div>
                                     <!-- Price -->
                                     <div class="row col-6 col-md-3 align-items-center">
-                                        <div class="text-danger fw-bold" id="price-1">₱ 80.00</div>
+                                        <div class="text-danger fw-bold" id="price-1">₱ <?php echo $row3['price']?>.00</div>
                                     </div>
+
                                     <!-- Quantity -->
                                     <div class="row col-6 col-md-2 align-items-center">
                                         <!-- Input quantity value -->
                                         <div class="d-flex align-items-center justify-content-center">
 
-                                            <button type="button" id="minus" class="btn btn-outline-secondary d-inline">-</button>
-                                            <input type="text" class="form-control text-center d-inline" id="order-1" value="1" style="width: 50px;">
-                                            <button type="button" id="plus" class="btn btn-outline-secondary d-inline rounded-end">+</button>
+                                        <form action="qty.php" method="post">
+                                            <input type="hidden" name="itemName" value="<?php echo $row3['item_name'] ?>">
+                                            <button type="submit" id="minus" name="minus" class="btn btn-outline-secondary d-inline">-</button>
+                                            <input type="number" class="form-control text-center d-inline" id="order-1" name="qty" style="width: 50px;" required>
+                                            <button type="submit" id="plus" name="plus" class="btn btn-outline-secondary d-inline rounded-end">+</button>
+                                        </form>
                                         </div>
 
 
                                     </div>
 
-
                                 </div>
-                        </div>
+                            </div>
+                            <?php endwhile; ?>
+                            <?php endwhile; ?>
 
                         <div class="row bg-white border p-2 fw-bold">
                             <div class="col-1"></div>
@@ -83,11 +113,7 @@ include "navbar.php";
 
 
                 </div>
-
-                <!-- Llean's Store -->
-
-
-
+                <?php endwhile; ?>
                 <!-- End of Container Left Side -->
 
                 <!-- Start of Container Right Side -->
@@ -129,9 +155,5 @@ include "navbar.php";
 
     <br><br><br><br><br><br><br><br><br><br>
     <!-- End of Content -->
-    <!-- Insertion of Script -->
-    <script src="../script/cart.js">
-    </script>
-     <script src="../script/payment.js">
-    </script>
-<?php include "../footer.php" ?>
+
+    <?php include "../footer.php" ?>

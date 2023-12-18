@@ -1,12 +1,13 @@
 <?php 
 session_start();
 include "../php-connect/db_conn.php";
-include "navbar.php";
 
 //Go to home if the user is not log in yet
 if(!isset($_SESSION['email'])){
   header("Location: login.php");
+  exit;
 }
+include "navbar.php";
 ?>
 
   <!-- Start of Content -->
@@ -32,7 +33,8 @@ if(!isset($_SESSION['email'])){
             <p class="card-text text-secondary"><?php echo $row['business_name'] ?></p>
             <div class="d-flex justify-content-between">
               <p>₱<?php echo $row['price']?>.00</p>
-              <a class="btn btn-primary rounded-circle" href="addtocart.php?menuItem=<?php echo $row['menuItemID'] ?>&concessioner=<?php echo $row['concessionerID'] ?>"><b>+</b></a>
+              <!-- <a class="btn btn-primary rounded-circle" href="addtocart.php?menuItem=<?php echo $row['menuItemID'] ?>&concessioner=<?php echo $row['concessionerID'] ?>&price=<?php echo $row['price'] ?>"><b>+</b></a> -->
+              <buttton class="btn btn-primary rounded-circle"><b>+</b></button>
             </div>
           </div>
         </div>

@@ -1,3 +1,9 @@
+<? 
+session_start();
+include "../php-connect/db_conn.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +31,7 @@
 
       <!-- Center of Navbar -->
       <div class="d-flex justify-content-center">
-        <a class="navbar-brand fs-2" href="#">
+        <a class="navbar-brand fs-2" href="home.php">
           <!-- Logo Image -->
           <img src="../img/grub-grab.png" class="grub-grab-logo" alt="grub-grab">
         </a>
@@ -33,6 +39,7 @@
 
       <!-- Right side of navbar -->
       <div class="d-flex">
+        <?php if ( basename($_SERVER['SCRIPT_FILENAME']) !== 'login.php') : ?>
         <div class="shopping-icons mr-5">
           <a href="cart.php" class="icons-btn d-inline-block text-white pe-3">
             <i class="fas fa-shopping-cart"></i>
@@ -47,12 +54,21 @@
       <i class="fas fa-user"></i>
     </button>
     <ul class="dropdown-menu">
+      <li><?php $sql = "SELECT * FROM tbl_customer WHERE customerID='{$_SESSION['id']}'"; 
+          $result = mysqli_query($conn, $sql);
+          while($row = mysqli_fetch_assoc($result)){
+            echo '<h6 class="ps-3">'.$row['first_name'] .' '. $row['last_name'].'</h6>';
+            echo '<p class="ps-3 text-secondary">'.$row['email'].'</p>';
+            echo '<hr>';
+          }
+?></li>
       <li><a class="dropdown-item" href="logout.php">Logout</a></li>
     </ul>
   </div>
           <!-- End of Dropdown User -->
 
         </div>
+        <?php endif; ?> 
       </div>
 
       <!-- Appearing when clicked -->
@@ -65,7 +81,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="home.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Shop</a>
@@ -76,6 +92,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
             </li>
+            <?php if ( basename($_SERVER['SCRIPT_FILENAME']) == 'login.php') { ?>
             <hr>
             <li class="nav-item">
               <a class="nav-link" href="../admin/login.php">Login as Admin</a>
@@ -83,6 +100,13 @@
             <li class="nav-item">
               <a class="nav-link" href="../concessioner/login.php">Login as Concessioner</a>
             </li>
+            <?php } else{ ?> 
+                <hr>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">Logout</a>
+            </li>
+            <?php } ?> 
+
           </ul>
         </div>
         <!-- End of List in offcanvas body -->

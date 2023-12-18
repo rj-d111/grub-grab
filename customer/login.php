@@ -1,6 +1,11 @@
 <?php 
 session_start();
-include "navbar.php" ?>
+
+if(isset($_SESSION['email'])){
+    header("Location: home.php");
+}
+include "navbar.php" 
+?>
 
 <!-- Start of main content -->
 <div class="d-flex justify-content-center" style="margin-top: 100px;">
@@ -29,6 +34,10 @@ include "navbar.php" ?>
                 <div class="text-center">
                     <button class="btn btn-danger" value="admin-log-in" name="submit" type="submit">Sign in</button>
                 </div>
+                <div class="my-3">
+                  <p>Don't have an account? <a class="link-offset-2 link-underline link-underline-opacity-0" href="signup.php">Sign up here.</a></p>
+                    
+                  </div>
                 <p class="mt-5 mb-3 text-muted text-center">© 2023 ALL RIGHTS RESERVED</p>
             </form>
             <!-- End of Login Page -->
