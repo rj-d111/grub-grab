@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Copy of FOR REPORTING ONLY  GRUB GRAB - fordagraydes (1)" src="https://github.com/user-attachments/assets/f21ec85e-bc65-4130-afa6-62e7c93d1934" /># GRUB GRAB: School Canteen Ordering Optimization
+# GRUB GRAB: School Canteen Ordering Optimization
 
 
 
